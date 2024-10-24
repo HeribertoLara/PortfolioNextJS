@@ -1,0 +1,200 @@
+@tailwind base;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,600;0,900;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,600;0,900;1,800&family=Tourney:wght@400;500;600&display=swap');
+
+
+*{
+    font-family: 'Lexend Exa', sans-serif;
+    background-color:black;
+}
+
+
+
+.doble-font{
+    font-family: 'Tourney', cursive;
+
+}
+
+h2 b{
+    color: red;
+}
+
+.bg-black1{
+    width:100%;
+    height: 100%;
+    background-color: black;
+}
+
+.menu{
+    margin-bottom: 0;
+    @apply  flex pt-6;
+}
+
+
+/* .grid-two{
+    display: grid; 
+    grid-template-columns: 60% 40%;
+} */
+
+.title{
+    font-size: 5rem;
+    @apply text-center md:pt-12 my-24;
+}
+.transition1{
+    transform: translateX(0);
+    transition: transform .5s;
+} 
+.transition1:hover{
+    transform: translateX(2rem);
+}
+
+
+.maquina-escribir{
+    font-size: 2.5rem;
+    @apply text-center mt-44 ml-6  text-red-600;
+    background: black;
+    position: relative;
+    font-weight: 600;
+}
+.maquina-escribir::after{
+    margin-top:0.5rem;
+   
+    content: "";
+    border-left: 4px solid white;
+    background: black;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    animation: maquinaescribir 2s  alternate steps(20);
+}
+@keyframes maquinaescribir {
+    from {
+        width: 100%;
+    }
+    to{ 
+        width: 0;
+    }
+}
+
+.list{
+    @apply pl-12
+}
+.list-element{
+    color: white;
+
+    border-bottom: white;
+   
+}
+.list-element:hover{
+    @apply text-red-600;
+    border-bottom: red;
+}
+
+.icon{
+    width: 50px;
+}
+.grid-four{
+    display: grid;
+    grid-template-columns: 12vw 12vw 12vw 12vw;
+    grid-gap:5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.g2{
+    grid-column: 2/2;
+   
+}
+
+.logo-tech{
+
+    width: 100%;
+    filter:  grayscale(1);
+  
+    transform: none;
+    transition-property: transform ;
+    transition-duration: .5s;
+
+}
+
+
+.logo-tech:hover{
+    transform: translateY(-3px) scale(1.1);
+    filter: grayscale(0);
+    
+}
+
+
+
+.border-logo{
+    border: blanchedalmond;
+    border-width: medium;
+}
+
+/* contact */
+.grid-two{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    
+}
+
+.border-h{
+    border: red 20px;
+}
+
+@media (max-width : 900px) {
+    .title{
+        font-size: 2rem;
+        @apply text-center md:pt-12 my-24;
+    }
+
+    
+    .grid-two{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .grid-four{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 40vw 40vw;
+    }
+
+    .maquina-escribir{
+        font-size: 1.5rem;
+        @apply text-center mt-44 ml-2  text-red-600;
+        background: black;
+        position: relative;
+        font-weight: 400;
+    }
+    .maquina-escribir::after{
+        margin-top:3px;
+       
+        content: "";
+        border-left: 4px solid white;
+        background: black;
+        right: 0;
+        height: 100%;
+        position: absolute;
+        animation: maquinaescribir 4s  alternate steps(20);
+    }
+    @keyframes maquinaescribir {
+        from {
+            width: 100%;
+        }
+        to{ 
+            width: 0;
+        }
+    }
+    
+    
+}
+
+
+
+@tailwind components;
+@tailwind utilities;
